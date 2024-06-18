@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="icon"
@@ -24,31 +23,25 @@
   <body>
     <main>
       <div class="container">
-        <h1>ADVICE #117</h1>
-        <blockquote>
-          “It is easy to sit up and take notice, what's difficult is getting up
-          and taking action.”
-        </blockquote>
+        <h1 class="heading">ADVICE #<span class="adviceId"></span></h1>
+        <blockquote class="advice">Loading advice...</blockquote>
+
         <picture>
           <source
-            media="(max-width: 37.5rem)"
-            srcset="images/pattern-divider-mobile.svg"
+            media="(min-width: 26.625rem)"
+            srcset="images/pattern-divider-desktop.svg"
           />
           <img
-            src="images/pattern-divider-desktop.svg"
+            src="images/pattern-divider-mobile.svg"
             alt=""
             role="presentation"
           />
         </picture>
-        <button aria-label="Generate new advice" id="dice" class="btn">
+
+        <button aria-label="Generate new advice" class="btn">
           <img src="images/icon-dice.svg" alt="" role="presentation" />
         </button>
       </div>
     </main>
   </body>
 </html>
-
-<!-- Advice # -->
-<!-- Advice ID goes here -->
-
-<!-- "Advice text goes here" -->
