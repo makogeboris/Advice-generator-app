@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://your-solution-url.com)
-- [Live Site](https://your-live-site-url.com)
+- [Solution](https://github.com/mkboris/Advice-generator-app)
+- [Live Site](https://advice-generator-app-omega-beryl.vercel.app/)
 
 ### Built with
 
@@ -36,32 +36,27 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
+- Fetch API
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+This was my first time working with APIs and integrating it with an application. I laerned how to use the fetch API to make a request to a 3rd party API in this case the [Advice Slip API](https://api.adviceslip.com/), which generates random advice quotes.
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+  fetch("https://api.adviceslip.com/advice")
+    .then((res) => res.json())
+    .then((data) => {
+      adviceId.innerHTML = `${data.slip.id}`;
+      advice.innerHTML = `”${data.slip.advice}”`;
+    })
+    .catch((err) => {
+      advice.innerHTML = `Something went wrong😢: ${err.message}`;
+    });
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I find working with APIs quite facinating so I will continue to improve my skills by trying out other APIs.
 
 ## Author
 
