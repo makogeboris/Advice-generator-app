@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Get inspired with the Advice Generator App. Click the button to generate random advice and make your day a bit brighter. Perfect for quick motivational boosts and thoughtful insights."
+    />
     <link
       rel="icon"
       type="image/png"
@@ -24,22 +28,20 @@
     <main>
       <div class="container">
         <h1 class="heading">ADVICE #<span class="adviceId"></span></h1>
-        <blockquote class="advice">Loading advice...</blockquote>
+        <blockquote class="advice" aria-live="polite">
+          Loading advice...
+        </blockquote>
 
         <picture>
           <source
             media="(min-width: 26.625rem)"
             srcset="images/pattern-divider-desktop.svg"
           />
-          <img
-            src="images/pattern-divider-mobile.svg"
-            alt=""
-            role="presentation"
-          />
+          <img src="images/pattern-divider-mobile.svg" alt="" />
         </picture>
 
         <button aria-label="Generate new advice" class="btn">
-          <img src="images/icon-dice.svg" alt="" role="presentation" />
+          <img src="images/icon-dice.svg" alt="" />
         </button>
       </div>
     </main>
