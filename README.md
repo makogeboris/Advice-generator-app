@@ -40,18 +40,18 @@ Users should be able to:
 
 ### What I learned
 
-This was my first time working with APIs and integrating it with an application. I laerned how to use the fetch API to make a request to a 3rd party API in this case the [Advice Slip API](https://api.adviceslip.com/), which generates random advice quotes.
+This was my first time working with APIs and integrating it with an application. I learned how to use the fetch API to make a request to a 3rd party API in this case the [Advice Slip API](https://api.adviceslip.com/), which generates random advice quotes.
 
 ```js
-  fetch("https://api.adviceslip.com/advice")
-    .then((res) => res.json())
-    .then((data) => {
-      adviceId.innerHTML = `${data.slip.id}`;
-      advice.innerHTML = `”${data.slip.advice}”`;
-    })
-    .catch((err) => {
-      advice.innerHTML = `Something went wrong😢: ${err.message}`;
-    });
+fetch("https://api.adviceslip.com/advice")
+  .then((res) => res.json())
+  .then((data) => {
+    adviceId.innerHTML = `${data.slip.id}`;
+    advice.innerHTML = `”${data.slip.advice}”`;
+  })
+  .catch((err) => {
+    advice.innerHTML = `Something went wrong: ${err.message}`;
+  });
 ```
 
 ### Continued development

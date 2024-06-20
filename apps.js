@@ -14,7 +14,7 @@ function generateAdvice() {
       advice.innerHTML = `”${data.slip.advice}”`;
     })
     .catch((err) => {
-      advice.innerHTML = `Something went wrong😢: ${err.message}`;
+      advice.innerHTML = `Something went wrong: ${err.message}`;
     });
 }
 
