@@ -8,7 +8,12 @@ btn.addEventListener("click", generateAdvice);
 
 function generateAdvice() {
   fetch("https://api.adviceslip.com/advice")
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+      return res.json();
+    })
     .then((data) => {
       adviceId.innerHTML = `${data.slip.id}`;
       advice.innerHTML = `”${data.slip.advice}”`;
